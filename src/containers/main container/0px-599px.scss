@@ -1,0 +1,11 @@
+@import "../../sass/__variables";
+
+@media only screen and (max-width: 599px) {
+  .App {
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    min-height: 207.246vw;
+    background: $white-background;
+  }
+}
