@@ -10,8 +10,8 @@ const MainSection = () => {
 
     return (
         <main className="main-section">
-            {/* <SongsContainer /> */}
-            <InfoContainer />
+            <SongsContainer />
+            {/* <InfoContainer /> */}
         </main>
     )
 };

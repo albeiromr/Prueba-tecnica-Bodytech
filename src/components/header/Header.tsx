@@ -2,10 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import "./0px-599px.scss";
 import "./600px-1024px.scss";
 import "./1025px-1920px.scss";
-import {song} from "../../redux/types";
 import logoDesktop from "../../assets/logo/logoDesktop.png";
+import {song} from "../../redux/types";
+import {getAllSongsAction} from '../../redux/actions/actions';
+import { useDispatch } from 'react-redux';
 
 const Header = () => {
+
+    const dispatch = useDispatch();
 
     //saving the spotify token in local state
     const [spotifyToken, setSpotifyToken] = useState("");
@@ -57,7 +61,10 @@ const Header = () => {
             }
             tracksArray.push(newSong)
         }
-        //console.log(tracksArray)
+
+        //sending the songs to the state
+        dispatch(getAllSongsAction(tracksArray));
+
         searchForm.current?.reset();
         setSongName("");
 

@@ -20,6 +20,10 @@
       font-weight: 500;
       font-size: clamp(15px, 4.83vw, 22px);
       color: $third-color;
+      width: 70%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     &__artist {
@@ -30,6 +34,10 @@
       font-size: clamp(14px, 4.347vw, 22px);
       color: $soft-gray-secundary-font;
       white-space: nowrap;
+      width: 70%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     &__line {
