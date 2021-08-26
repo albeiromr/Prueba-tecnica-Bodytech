@@ -1,0 +1,11 @@
+@import "../../sass/__variables";
+@import "../../sass/__mixins";
+
+@media only screen and (max-width: 599px) {
+  .main-section {
+    width: 100%;
+    height: auto;
+    min-height: clamp(400.14px, 104.106vw, 623.596px);
+    background: cadetblue;
+  }
+}

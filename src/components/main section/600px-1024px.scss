@@ -1,10 +1,11 @@
 @import "../../sass/__variables";
+@import "../../sass/__mixins";
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
-  .main-container {
+  .main-section{
     width: 100%;
     height: auto;
-    background: $white-background;
-    position: relative;
+    min-height: clamp(424.471px, 143.165vw, 725.640px);
+    background: cadetblue;
   }
 }
