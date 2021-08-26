@@ -3,8 +3,15 @@ import "./0px-599px.scss";
 import "./600px-1024px.scss";
 import "./1025px-1920px.scss";
 import Song from "../song/Song";
+import {useHistory} from "react-router-dom";
 
-const songCard = () => {
+const SongCard = () => {
+
+   const history = useHistory()
+
+   const handleClick = () => {
+    history.push("/");
+   }
 
     return (
         <article className="song-card">
@@ -26,9 +33,9 @@ const songCard = () => {
                     <p className="song-card__text">Artist's name</p>
                 </div>
             </div>
-            <button className="song-card__button">Back to results</button>
+            <button onClick={handleClick} className="song-card__button">Back to results</button>
         </article>
     )
 }
 
-export default songCard;
+export default SongCard;
