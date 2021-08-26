@@ -10,10 +10,13 @@
     &__cover {
       width: 38.881%;
       height: 62.637%;
-      background: dimgray;
       position: absolute;
       top: 0;
       left: 0;
+    }
+
+    &__cover-image {
+      width: 100%;
     }
 
     &__info-container {
@@ -53,6 +56,10 @@
       font-weight: 400;
       font-size: clamp(18px, 2.398vw, 25px);
       color: $soft-gray-font;
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     &__button {

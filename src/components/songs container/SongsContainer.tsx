@@ -7,13 +7,15 @@ import {useAppSelector} from "../../redux/hooks/hooks";
 
 const SongsContainer = () => {
 
-    const songs = useAppSelector(state => state.songResults)
+    const songs = useAppSelector(state => state.songResults);
+
     return (
         <div className="songs-container">
             {songs.map(song => <Song
+                key={song.key}
+                id={song.key}
                 title={song.name}
                 artist={song.artist}
-                key={song.key}
             />)}
             
         </div>

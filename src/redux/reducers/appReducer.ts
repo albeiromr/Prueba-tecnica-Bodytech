@@ -20,6 +20,11 @@ interface action {
 
 const appReducer = (state: appReducerState = initialState, action: action): appReducerState => {
     switch (action.type) {
+        case SELECT_SONG:
+            return {
+                ...state,
+                selectedSong: action.payload
+            }
         case GET_ALL_SONGS:
             return {
                 ...state,
