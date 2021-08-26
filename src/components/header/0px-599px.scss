@@ -1,4 +1,5 @@
 @import "../../sass/__variables";
+@import "../../sass/__mixins";
 
 @media only screen and (max-width: 599px) {
   .header {
@@ -33,12 +34,7 @@
     }
 
     &__lable {
-      margin: 0;
-      padding: 0;
-      font-family: $lato;
-      font-weight: 500;
-      font-size: clamp(14px, 4.347vw, 26.043px);
-      color: $soft-gray-font;
+      @include softGrayTextDesktop;
       position: relative;
       top: 0;
       left: 0;
@@ -55,7 +51,7 @@
       font-family: $lato;
       font-weight: 400;
       font-size: clamp(14px, 4.545vw, 30px);
-      color: $soft-gray-placeholder;
+      color: $soft-gray-font;
       box-shadow: 5px 5px 5px #96969628;
       position: absolute;
       top: 24.516%;

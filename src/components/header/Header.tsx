@@ -11,7 +11,9 @@ const Header = () => {
             <div className="header__green-bar"></div>
             <img className="header__logo" src={logoDesktop} alt="company logo" />
             <form className="header__form">
+                
                 <label className="header__lable" htmlFor="song">Find your song</label>
+
                 <input 
                 className="header__input"
                 id="song"
@@ -19,10 +21,12 @@ const Header = () => {
                 name="song"
                 placeholder="Write your song title"
                 />
+
                 <button
                 className="header__button"
                 type="submit"
                 >Search</button>
+
             </form>
             
         </header>

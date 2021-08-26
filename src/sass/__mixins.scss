@@ -1,0 +1,26 @@
+@mixin softGrayTextDesktop {
+  margin: 0;
+  padding: 0;
+  font-family: $lato;
+  font-weight: 500;
+  font-size: clamp(16px, 2.146vw, 30.91px);
+  color: $soft-gray-font;
+}
+
+@mixin softGrayTextTablet {
+  margin: 0;
+  padding: 0;
+  font-family: $lato;
+  font-weight: 500;
+  font-size: clamp(15px, 2.977vw, 30.486px);
+  color: $soft-gray-font;
+}
+
+@mixin softGrayTextSmarthphone {
+  margin: 0;
+  padding: 0;
+  font-family: $lato;
+  font-weight: 500;
+  font-size: clamp(14px, 4.347vw, 26.043px);
+  color: $soft-gray-font;
+}

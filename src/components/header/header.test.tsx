@@ -16,3 +16,8 @@ test("the input value change when the user writes on it", () => {
     userEvent.type(searchInput, "this is a test text");
     expect(searchInput).toHaveDisplayValue("this is a test text");
 })
+
+test("submit button is visible for the user", () => {
+    const submitButton = screen.getByText("Search");
+    expect(submitButton).toBeVisible();
+})

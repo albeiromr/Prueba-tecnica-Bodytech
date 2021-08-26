@@ -1,0 +1,27 @@
+@import "../../sass/__variables";
+@import "../../sass/__mixins";
+
+@media only screen and (min-width: 1025px) {
+  .title-bar {
+    width: 100%;
+    height: 8.575vw;
+    max-height: 123.49px;
+    position: relative;
+
+    &__title {
+      @include softGrayTextDesktop;
+      position: absolute;
+      top: 39.517%;
+      left: 19.444%;
+    }
+
+    &__line {
+      width: 61.111%;
+      height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 19.444%;
+      background: $soft-gray-divisory-line;
+    }
+  }
+}
