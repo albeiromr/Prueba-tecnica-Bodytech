@@ -8,8 +8,24 @@ const songCard = () => {
 
     return (
         <article className="song-card">
-            <div className="song-card__cover-container"></div>
-            <div className="song-card__info-container"></div>
+            <div className="song-card__cover"></div>
+            <div className="song-card__info-container">
+
+                <div className="song-card__info-container-block">
+                    <p className="song-card__lable">Artist</p>
+                    <p className="song-card__text">Artist's name</p>
+                </div>
+
+                <div className="song-card__info-container-block">
+                    <p className="song-card__lable">Artist</p>
+                    <p className="song-card__text">Artist's name</p>
+                </div>
+
+                <div className="song-card__info-container-block">
+                    <p className="song-card__lable">Artist</p>
+                    <p className="song-card__text">Artist's name</p>
+                </div>
+            </div>
             <button className="song-card__button">Back to results</button>
         </article>
     )
