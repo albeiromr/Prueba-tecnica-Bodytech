@@ -2,10 +2,11 @@ import { appReducerState, song } from "../types";
 
 const initialState: appReducerState = {
     selectedSong: {
-        key: "string",
-        name: "string",
-        artist: "string",
-        album: "string",
+        key: "",
+        name: "",
+        artist: "",
+        album: "",
+        cover: ""
     },
     songResults: [],
     error: false

@@ -5,6 +5,7 @@ export interface song {
   name: string;
   artist: string;
   album: string;
+  cover: string;
 }
 
 export interface appReducerState {

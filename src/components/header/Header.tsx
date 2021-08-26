@@ -2,14 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import "./0px-599px.scss";
 import "./600px-1024px.scss";
 import "./1025px-1920px.scss";
-import axios from "axios";
+import {song} from "../../redux/types";
 import logoDesktop from "../../assets/logo/logoDesktop.png";
 
 const Header = () => {
-    
+
+    //saving the spotify token in local state
     const [spotifyToken, setSpotifyToken] = useState("");
     
-    //Getting the spotify token
+    //getting the spotify token
     useEffect(() => {
         fetch("https://accounts.spotify.com/api/token", {
             method: "POST",
@@ -20,20 +21,43 @@ const Header = () => {
             body: "grant_type=client_credentials"
         })
         .then(response => response.json())
-        .then(data => setSpotifyToken(data));
+        .then(data => setSpotifyToken(data.access_token));
     }, [])
 
+    //getting the Form element from the dom
     const searchForm = useRef<HTMLFormElement>(null)
 
+    //saving the song that the user types in the search input
     const [songName, setSongName] = useState<string>("");
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setSongName(e.target.value);
     }
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    
+    const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        //
+
+        //looking for the songs the user has typep
+        const request = await fetch(`https://api.spotify.com/v1/search?q=${songName}&type=track&limit=8`, {
+            method: "GET",
+            headers: {"Authorization": "Bearer " + spotifyToken}
+        })
+        const data = await request.json()
+
+        //extracting only the propieties we are going to use
+        let tracksArray: song[] = []
+        for (let i = 0; i < data.tracks.items.length; i++) {
+            const newSong: song = {
+                key: data.tracks.items[i].id,
+                name: data.tracks.items[i].name,
+                artist: data.tracks.items[i].artists[0].name,
+                album: data.tracks.items[i].album.name,
+                cover: data.tracks.items[i].album.images[0].url
+            }
+            tracksArray.push(newSong)
+        }
+        //console.log(tracksArray)
         searchForm.current?.reset();
         setSongName("");
 
