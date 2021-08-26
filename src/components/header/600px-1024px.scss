@@ -1,0 +1,83 @@
+@import "../../sass/__variables";
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .header {
+    width: 100%;
+    height: 34.652vw;
+    position: relative;
+
+    &__green-bar {
+      width: 100%;
+      height: 91.003%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $brand-color;
+    }
+
+    &__logo {
+      max-width: 51.519%;
+      position: absolute;
+      z-index: 10;
+      top: 9.342%;
+      left: 24.22%;
+    }
+
+    &__form {
+      width: 87.889%;
+      height: 41.176%;
+      position: absolute;
+      bottom: 0;
+      left: 6.055%;
+    }
+
+    &__lable {
+      margin: 0;
+      padding: 0;
+      font-family: $lato;
+      font-weight: 500;
+      font-size: clamp(15px, 2.977vw, 30.486px);
+      color: $soft-gray-font;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    &__input {
+      outline: none;
+      box-sizing: border-box;
+      width: 77.489%;
+      height: 54.621%;
+      border-radius: clamp(5px, 1.323vw, 13.555px);
+      border: 2px $soft-gray-input-border solid;
+      padding: 0 2.613%;
+      font-family: $lato;
+      font-weight: 400;
+      font-size: clamp(15px, 2.5vw, 30.486px);
+      color: $soft-gray-placeholder;
+      box-shadow: 5px 5px 5px #96969628;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__button {
+      width: 21.145%;
+      height: 54.621%;
+      outline: none;
+      border: none;
+      background: $secundary-color;
+      border-radius: clamp(5px, 1.323vw, 13.555px);
+      box-sizing: border-box;
+      box-shadow: 5px 5px 5px #56565628;
+      font-family: $lato;
+      font-weight: 700;
+      font-size: clamp(15px, 2.5vw, 30.486px);
+      color: $white-background;
+      cursor: pointer;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
