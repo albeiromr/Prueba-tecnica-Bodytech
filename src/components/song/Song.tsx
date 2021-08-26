@@ -7,6 +7,7 @@ import eye from "../../assets/icons/eye.svg"
 interface songProps {
     title: string;
     artist: string;
+    key: string;
 }
 
 const Song:FC<songProps> = (props) => {

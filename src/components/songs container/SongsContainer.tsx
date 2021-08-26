@@ -11,6 +11,7 @@ const SongsContainer = () => {
             <Song 
             title={"Complete song title"}
             artist={"Artist´s name"}
+            key={"A1"}
             />
         </div>
     )

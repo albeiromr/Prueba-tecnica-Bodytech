@@ -1,0 +1,47 @@
+@import "../../sass/__variables";
+@import "../../sass/__mixins";
+
+@media only screen and (min-width: 1025px) {
+  .song-card {
+    width: 100%;
+    height: 31.597vw;
+    max-height: 455px;
+    background: darksalmon;
+    position: relative;
+
+    &__cover-container {
+      width: 32.286%;
+      height: 68.571%;
+      background: dimgray;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__info-container {
+      width: 60.681%;
+      height: 63.736%;
+      background: darkseagreen;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &__button {
+      width: 32.386%;
+      height: 12.967%;
+      outline: none;
+      border: none;
+      border-radius: clamp(5px, 0.954vw, 13.74px);
+      font-family: $lato;
+      font-weight: 700;
+      font-size: clamp(14, 1.25vw, 18px);
+      color: $white-background;
+      cursor: pointer;
+      background: $brand-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

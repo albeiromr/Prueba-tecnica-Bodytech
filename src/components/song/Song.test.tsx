@@ -5,6 +5,7 @@ beforeEach(() => {
     render(<Song 
         title={"21 guns"}
         artist={"green day"}
+        key={"a1"}
     />)
 })
 
