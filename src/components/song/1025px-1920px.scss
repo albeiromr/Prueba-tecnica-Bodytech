@@ -1,0 +1,72 @@
+@import "../../sass/__variables";
+@import "../../sass/__mixins";
+
+@media only screen and (min-width: 1025px) {
+  .song {
+    margin: 10px 0;
+    width: 100%;
+    height: clamp(70.4px, 6.875vw, 99px);
+    background: $white-background;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+
+    &__title {
+      margin: 0;
+      padding: 0;
+      font-family: $lato;
+      font-weight: 500;
+      font-size: clamp(16px, 1.597vw, 23px);
+      color: $third-color;
+    }
+
+    &__artist {
+      margin: 0;
+      padding: 0;
+      font-family: $lato;
+      font-weight: 500;
+      font-size: clamp(15px, 1.25vw, 18px);
+      color: $soft-gray-secundary-font;
+      white-space: nowrap;
+    }
+
+    &__line {
+      width: 100%;
+      height: 3px;
+      background: $soft-gray-secundary-divisory-line;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__button {
+      width: 16.359%;
+      height: 43.434%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background: $brand-color;
+      border-radius: clamp(5px, 0.954vw, 13.74px);
+      position: absolute;
+      right: 0;
+    }
+
+    &__button-text {
+      margin: 0 8% 2% 0;
+      padding: 0;
+      font-family: $lato;
+      font-weight: 700;
+      font-size: clamp(14, 1.25vw, 18px);
+      color: $white-background;
+    }
+
+    &__button-icon {
+      width: 19.622%;
+    }
+  }
+}

@@ -5,6 +5,8 @@
   .main-section {
     width: 100%;
     height: auto;
+    box-sizing: border-box;
+    padding: 20px clamp(16.231px, 5.072vw, 30.384px);
     min-height: clamp(400.14px, 104.106vw, 623.596px);
     background: cadetblue;
   }

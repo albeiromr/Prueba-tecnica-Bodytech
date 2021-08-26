@@ -1,0 +1,67 @@
+@import "../../sass/__variables";
+@import "../../sass/__mixins";
+
+@media only screen and (max-width: 599px) {
+  .song {
+    margin: 10px 0;
+    width: 100%;
+    height: clamp(57.198px, 17.874vw, 74px);
+    background: $white-background;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+
+    &__title {
+      margin: 0;
+      padding: 0;
+      font-family: $lato;
+      font-weight: 500;
+      font-size: clamp(15px, 4.83vw, 22px);
+      color: $third-color;
+    }
+
+    &__artist {
+      margin: 0;
+      padding: 0;
+      font-family: $lato;
+      font-weight: 500;
+      font-size: clamp(14px, 4.347vw, 22px);
+      color: $soft-gray-secundary-font;
+      white-space: nowrap;
+    }
+
+    &__line {
+      width: 100%;
+      height: 3px;
+      background: $soft-gray-secundary-divisory-line;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__button {
+      width: 16.59%;
+      height: 63.108%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background: $brand-color;
+      border-radius: clamp(5px, 2.335vw, 13.991px);
+      position: absolute;
+      right: 0;
+    }
+
+    &__button-text {
+      display: none;
+    }
+
+    &__button-icon {
+      width: 65.622%;
+    }
+  }
+}

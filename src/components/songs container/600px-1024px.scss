@@ -2,12 +2,8 @@
 @import "../../sass/__mixins";
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
-  .main-section{
+  .songs-container {
     width: 100%;
     height: auto;
-    box-sizing: border-box;
-    padding: 20px 6.055vw;
-    min-height: clamp(424.471px, 143.165vw, 725.640px);
-    background: cadetblue;
   }
 }

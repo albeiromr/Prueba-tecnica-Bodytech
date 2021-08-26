@@ -1,0 +1,9 @@
+@import "../../sass/__variables";
+@import "../../sass/__mixins";
+
+@media only screen and (min-width: 1025px) {
+  .songs-container {
+    width: 100%;
+    height: auto;
+  }
+}
