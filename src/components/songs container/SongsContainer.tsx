@@ -8,8 +8,10 @@ const SongsContainer = () => {
 
     return (
         <div className="songs-container">
-            <Song />
-            <Song />
+            <Song 
+            title={"Complete song title"}
+            artist={"Artist´s name"}
+            />
         </div>
     )
 }
