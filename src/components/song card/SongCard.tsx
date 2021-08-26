@@ -16,6 +16,13 @@ const SongCard = () => {
     history.push("/");
    }
 
+    window.onload = function () {
+        if (selectedSong.cover === "") {
+            history.push("/");
+        }
+    }
+
+
     return (
         <article className="song-card">
             <div className="song-card__cover">
