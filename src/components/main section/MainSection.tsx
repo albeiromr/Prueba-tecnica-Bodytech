@@ -11,8 +11,10 @@ const MainSection = () => {
 
     return (
         <main className="main-section">
-            <Route path="/" exact component={SongsContainer}/>
-            <Route path="/card" exact component={InfoContainer}/>
+            <Switch >
+                <Route path="/" exact component={SongsContainer}/>
+                <Route path="/card" exact component={InfoContainer}/>
+            </Switch>
         </main>
     )
 };

@@ -23,8 +23,3 @@ export interface getAllSongsActionInterface {
   type: string;
   payload: song[];
 }
-
-export interface setErrorActionInterface {
-  type: string;
-  payload: boolean;
-}

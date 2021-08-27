@@ -1,4 +1,4 @@
-import { song, selectSongActionInterface, getAllSongsActionInterface, setErrorActionInterface } from "../types";
+import { song, selectSongActionInterface, getAllSongsActionInterface} from "../types";
 import { SELECT_SONG, GET_ALL_SONGS} from "../types strings/typesStrings";
 
 export const selectSongAction = (song: song): selectSongActionInterface => {
