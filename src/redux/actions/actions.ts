@@ -1,5 +1,5 @@
 import { song, selectSongActionInterface, getAllSongsActionInterface, setErrorActionInterface } from "../types";
-import { SELECT_SONG, GET_ALL_SONGS, SET_ERROR, } from "../types strings/typesStrings";
+import { SELECT_SONG, GET_ALL_SONGS} from "../types strings/typesStrings";
 
 export const selectSongAction = (song: song): selectSongActionInterface => {
     return {
@@ -12,13 +12,6 @@ export const getAllSongsAction = (songsArray: song[]): getAllSongsActionInterfac
     return {
         type: GET_ALL_SONGS,
         payload: songsArray
-    }
-}
-
-export const setErrorAction = (error: boolean): setErrorActionInterface => {
-    return {
-        type: SET_ERROR,
-        payload: error
     }
 }
 

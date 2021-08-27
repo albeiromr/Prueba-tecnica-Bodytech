@@ -1,5 +1,5 @@
-import { appReducerState, song } from "../types";
-import { SELECT_SONG, GET_ALL_SONGS, SET_ERROR, } from "../types strings/typesStrings";
+import { appReducerState} from "../types";
+import { SELECT_SONG, GET_ALL_SONGS} from "../types strings/typesStrings";
 
 const initialState: appReducerState = {
     selectedSong: {
@@ -9,8 +9,7 @@ const initialState: appReducerState = {
         album: "",
         cover: ""
     },
-    songResults: [],
-    error: false
+    songResults: []
 }
 
 interface action {
@@ -20,18 +19,18 @@ interface action {
 
 const appReducer = (state: appReducerState = initialState, action: action): appReducerState => {
     switch (action.type) {
-        case SELECT_SONG:
-            return {
-                ...state,
-                selectedSong: action.payload
-            }
-        case GET_ALL_SONGS:
-            return {
-                ...state,
-                songResults: action.payload
-            }
-        default:
-            return state;
+      case SELECT_SONG:
+        return {
+          ...state,
+          selectedSong: action.payload,
+        }
+      case GET_ALL_SONGS:
+        return {
+          ...state,
+          songResults: action.payload,
+        }
+      default:
+        return state;
     }
 }
 

@@ -6,8 +6,11 @@ import logoDesktop from "../../assets/logo/logoDesktop.png";
 import {song} from "../../redux/types";
 import {getAllSongsAction} from '../../redux/actions/actions';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router';
 
 const Header = () => {
+
+    const history = useHistory()
 
     const dispatch = useDispatch();
 
@@ -39,13 +42,14 @@ const Header = () => {
     }
 
     
-    const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
 
         //looking for the songs the user has typep
         const request = await fetch(`https://api.spotify.com/v1/search?q=${songName}&type=track&limit=8`, {
             method: "GET",
-            headers: {"Authorization": "Bearer " + spotifyToken}
+            headers: { "Authorization": "Bearer " + spotifyToken }
         })
         const data = await request.json()
 
@@ -66,8 +70,8 @@ const Header = () => {
         dispatch(getAllSongsAction(tracksArray));
 
         searchForm.current?.reset();
+        history.push("/");
         setSongName("");
-
     }
 
     return (

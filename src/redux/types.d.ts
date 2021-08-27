@@ -11,7 +11,6 @@ export interface song {
 export interface appReducerState {
   selectedSong: song;
   songResults: song[];
-  error: boolean;
 }
 
 //action interfaces 
